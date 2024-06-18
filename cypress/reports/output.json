@@ -1,0 +1,168 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-06-29T10:23:14.627Z",
+    "end": "2022-06-29T10:27:32.413Z",
+    "duration": 36321,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3a0d9805-2cd3-4a3b-ad83-d2637aee9616",
+      "title": "",
+      "fullFile": "cypress/integration/Practice/iframes.js",
+      "file": "cypress/integration/Practice/iframes.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "234ce342-5299-4811-8bce-c7949409537a",
+          "title": "iframe test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "testing iframes",
+              "fullTitle": "iframe test testing iframes",
+              "timedOut": null,
+              "duration": 17520,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.rahulshettyacademy.com/AutomationPractice/');\ncy.frameLoaded('#courses-iframe');\ncy.iframe().find('a[href=\"mentorship\"]').eq(0).click();\ncy.wait(5000); //cy.iframe().contains('mentorship').click()\ncy.iframe().find('h3.pricing-price').should('have.length', 2);",
+              "err": {},
+              "uuid": "d2be383c-1a9e-4e17-8f46-c25b025831d6",
+              "parentUUID": "234ce342-5299-4811-8bce-c7949409537a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d2be383c-1a9e-4e17-8f46-c25b025831d6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17520,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "f3702201-31dd-4894-a14a-ebaf566c65f8",
+      "title": "",
+      "fullFile": "cypress/integration/Practice/iframes.js",
+      "file": "cypress/integration/Practice/iframes.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "db3f95dd-f58b-4ff4-9142-cda81115ec26",
+          "title": "iframe test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "testing iframes",
+              "fullTitle": "iframe test testing iframes",
+              "timedOut": null,
+              "duration": 18801,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.rahulshettyacademy.com/AutomationPractice/');\ncy.frameLoaded('#courses-iframe');\ncy.iframe().find('a[href=\"mentorship\"]').eq(0).click();\ncy.wait(5000); //cy.iframe().contains('mentorship').click()\ncy.iframe().find('h3.pricing-price').should('have.length', 2);",
+              "err": {},
+              "uuid": "d236df26-8d9b-4c49-9645-d3cc7a5b4c7b",
+              "parentUUID": "db3f95dd-f58b-4ff4-9142-cda81115ec26",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d236df26-8d9b-4c49-9645-d3cc7a5b4c7b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18801,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\.jsons",
+        "charts": true,
+        "html": false,
+        "json": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false
+      },
+      "version": "6.2.0"
+    }
+  }
+}

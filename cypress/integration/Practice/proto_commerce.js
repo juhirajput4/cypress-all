@@ -1,0 +1,58 @@
+/// <reference types="cypress" />
+const proto_data = require('../../fixtures/proto.json')
+describe('fill all the fields',function()
+{
+    it('fill all the fields',()=>
+    {
+        cy.visit('https://rahulshettyacademy.com/angularpractice/')
+        cy.get('input[name=name]:nth-child(2)').type('Juhi')
+        cy.get('input[name=name]:nth-child(1)').should('have.value','Juhi')
+        cy.get('input[name=email]').type('test@gmail.com')
+        cy.get('#exampleInputPassword1').type('1234567')
+        cy.get('#exampleCheck1').check()
+        cy.get('#exampleFormControlSelect1').select('Male')
+        cy.get('#inlineRadio2').click()
+        cy.get('input[name=bday]').type('1999-06-04')
+        cy.get('input[value="Submit"]').click()
+        //cy.get('.alert').should('Success! '+'The Form has been submitted successfully!.')
+        cy.get('.alert').contains('Success!')
+        cy.wait(3000)
+        cy.get('.close').click()
+    })
+
+    it.only('open with BaseUrl which is store in the cypress.json file ',()=>
+    {
+        cy.visit('/')
+        cy.get('input[name=name]:nth-child(2)').type('Juhi')
+        cy.get('input[name=name]:nth-child(1)').should('have.value','Juhi')
+        cy.get('input[name=email]').type('test@gmail.com')
+        cy.get('#exampleInputPassword1').type('1234567')
+        cy.get('#exampleCheck1').check()
+        cy.get('#exampleFormControlSelect1').select('Male')
+        cy.get('#inlineRadio2').click()
+        cy.get('input[name=bday]').type('1999-06-04')
+        cy.get('input[value="Submit"]').click()
+        //cy.get('.alert').should('Success! '+'The Form has been submitted successfully!.')
+        cy.get('.alert').contains('Success!')
+        cy.wait(3000)
+        cy.get('.close').click()
+    })
+    it('form submit using fixture',()=>
+    {
+        cy.visit(proto_data.url)
+        cy.get('input[name=name]:nth-child(2)').type(proto_data.name,{log:false})
+        cy.get('input[name=name]:nth-child(1)').should('have.value',proto_data.name,{log:false})
+        cy.get('input[name=email]').type(proto_data.email,{log:false})
+        cy.get('#exampleInputPassword1').type(proto_data.password,{log:false})
+        cy.get('#exampleCheck1').check()
+        cy.get('#exampleFormControlSelect1').select('Male')
+        cy.get('#inlineRadio2').click()
+        cy.get('input[name=bday]').type(proto_data.dob,{log:false})
+        cy.get('input[value="Submit"]').click()
+        //cy.get('.alert').should('Success! '+'The Form has been submitted successfully!.')
+        cy.get('.alert').contains('Success!')
+        cy.wait(3000)
+        cy.get('.close').click()
+    })
+    
+})

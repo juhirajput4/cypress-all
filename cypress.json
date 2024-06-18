@@ -1,0 +1,24 @@
+{
+   
+   "baseUrl": "https://www.rahulshettyacademy.com/AutomationPractice/",
+   
+   "env":
+   {
+        "url1" : "https://rahulshettyacademy.com/angularpractice/"
+   },
+   "projectId": "fcuoz2",
+   "reporter": "cypress-mochawesome-reporter",
+  "reporterOptions": {
+   "reportDir": "cypress/reports",
+    "charts": true,
+    "html": true,
+    "json": true,
+    "reportPageTitle": "custom-title",
+    "embeddedScreenshots": true,
+    "inlineAssets": true,
+    "saveAllAttempts": false
+  },
+  "screenshotOnRunFailure":true
+
+
+}
